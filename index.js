@@ -90,12 +90,26 @@ console.log(movieReleases(movies));
 	Q6) Write a function that updates the genre of the movie "The Dark Knight"
  to "Action/Drama" and returns the modified array of movies.
 ********************************/
-function updateGenre(movieArrays) {
-  movies.forEach((movie) => {
-    if (movie.title == "The Dark Knight") {
-      movie.genre = "Action/Drama";
+// function updateGenre(movieArrays) {
+//   movies.forEach((movie) => {
+//     if (movie.title == "The Dark Knight") {
+//       movie.genre = "Action/Drama";
+//     }
+//   });
+//   return movieArrays;
+// }
+// console.log(updateGenre(movies));
+
+const modifyDarkKnight = (movies) => {
+  let modifiedMovies = movies.map((movies) => {
+    if (movies.title == "The Dark Knight") {
+      movies.genre = "Action/Drama";
+      return movies;
+    } else {
+      return movies;
     }
   });
-  return movieArrays;
-}
-console.log(updateGenre(movies));
+  return modifiedMovies;
+};
+
+console.log(modifyDarkKnight(movies));
